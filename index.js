@@ -12,14 +12,14 @@ function getComputerChoice() {
     return "paper";
   } else return "scissors";
 }
-let computerChoice;
-// console.log("computer choice is: " + computerChoice);
-function getHumanChoice() {
-  let guess = prompt(
-    "Choose one from the following: Rock, Scissors, Paper"
-  ).toLowerCase();
-  return guess;
-}
+// let computerChoice;
+// // console.log("computer choice is: " + computerChoice);
+// function getHumanChoice() {
+//   let guess = prompt(
+//     "Choose one from the following: Rock, Scissors, Paper"
+//   ).toLowerCase();
+//   return guess;
+// }
 let humanChoice;
 // console.log("human choice is: " + humanChoice);
 let computerScore = 0;
@@ -69,9 +69,9 @@ function playGame() {
   }
 }
 
-playGame();
-if (computerScore > humanScore) {
-  alert("You lost!");
-} else if (computerScore === humanScore) {
-  alert("It's a draw!");
-} else alert("You won!");
+// playGame();
+// if (computerScore > humanScore) {
+//   alert("You lost!");
+// } else if (computerScore === humanScore) {
+//   alert("It's a draw!");
+// } else alert("You won!");
