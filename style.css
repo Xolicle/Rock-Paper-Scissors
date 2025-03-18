@@ -12,6 +12,10 @@ body {
 .subTitle {
   display: flex;
   justify-content: space-around;
+  margin: 10px;
+}
+.subTitle p {
+  text-align: center;
 }
 .container {
   border: 1px solid red;
