@@ -14,13 +14,37 @@ function getComputerChoice() {
 }
 // let computerChoice;
 // // console.log("computer choice is: " + computerChoice);
-// function getHumanChoice() {
-//   let guess = prompt(
-//     "Choose one from the following: Rock, Scissors, Paper"
-//   ).toLowerCase();
-//   return guess;
-// }
-let humanChoice;
+// let computerChoice = getComputerChoice();
+function getHumanChoice() {
+  // let guess = prompt(
+  //   "Choose one from the following: Rock, Scissors, Paper"
+  // ).toLowerCase();
+  let guess;
+  let moves = 0;
+  const btnList = document.querySelectorAll("button");
+  // console.log(btnList);
+  btnList.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      moves++;
+      if (btn.id == "rock") {
+        guess = "rock";
+        let computerChoice = getComputerChoice();
+        playRound(computerChoice, guess);
+      } else if (btn.id == "paper") {
+        guess = "paper";
+        let computerChoice = getComputerChoice();
+        playRound(computerChoice, guess);
+      } else {
+        guess = "scissors";
+        let computerChoice = getComputerChoice();
+        playRound(computerChoice, guess);
+      }
+      console.log(moves);
+    });
+  });
+}
+getHumanChoice();
+// let humanChoice;
 // console.log("human choice is: " + humanChoice);
 let computerScore = 0;
 let humanScore = 0;
@@ -58,12 +82,11 @@ function playRound(computerSelection, humanSelection) {
   }
 }
 function playGame() {
-  let round = 0;
-  while (round < 5) {
-    computerChoice = getComputerChoice();
-    humanChoice = getHumanChoice();
-    playRound(computerChoice, humanChoice);
-    round++;
+  // let round = 0;
+  while (moves < 2) {
+    // computerChoice = getComputerChoice();
+    // getHumanChoice();
+    // playRound(computerChoice, humanChoice);
     console.log("computer score:" + computerScore);
     console.log(`human score is: ${humanScore}`);
   }
