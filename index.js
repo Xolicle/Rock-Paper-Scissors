@@ -12,6 +12,7 @@ function getComputerChoice() {
     return "paper";
   } else return "scissors";
 }
+
 // let computerChoice;
 // // console.log("computer choice is: " + computerChoice);
 // let computerChoice = getComputerChoice();
@@ -23,9 +24,12 @@ function getHumanChoice() {
   let moves = 0;
   const btnList = document.querySelectorAll("button");
   // console.log(btnList);
+  const round = document.querySelector(".moves");
+  round.innerHTML = `Round 1/5`;
   btnList.forEach((btn) => {
     btn.addEventListener("click", () => {
       moves++;
+      round.innerHTML = `Round ${moves + 1}/5`;
       if (btn.id == "rock") {
         guess = "rock";
         let computerChoice = getComputerChoice();
@@ -39,7 +43,10 @@ function getHumanChoice() {
         let computerChoice = getComputerChoice();
         playRound(computerChoice, guess);
       }
-      console.log(moves);
+      // console.log(`moves is ${moves}`);
+      if (moves == 5) {
+        gameOver(btnList, round);
+      }
     });
   });
 }
@@ -81,18 +88,13 @@ function playRound(computerSelection, humanSelection) {
     console.log("You Won! Paper beats Rock");
   }
 }
-function playGame() {
-  // let round = 0;
-  while (moves < 2) {
-    // computerChoice = getComputerChoice();
-    // getHumanChoice();
-    // playRound(computerChoice, humanChoice);
-    console.log("computer score:" + computerScore);
-    console.log(`human score is: ${humanScore}`);
-  }
+function gameOver(list, move) {
+  list.forEach((elem) => {
+    elem.style.display = "none";
+  });
+  move.style.display = "none";
 }
 
-// playGame();
 // if (computerScore > humanScore) {
 //   alert("You lost!");
 // } else if (computerScore === humanScore) {

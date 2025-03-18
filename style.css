@@ -9,10 +9,14 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+.subTitle {
+  display: flex;
+  justify-content: space-around;
+}
 .container {
   border: 1px solid red;
   width: 25rem;
-  height: 12.5rem;
+  height: 25rem;
   padding: 0.625rem;
   /* margin: auto; */
 }
@@ -33,7 +37,7 @@ body {
 .icon {
   font-size: 3rem;
 }
-.result {
+.moves {
   text-align: center;
   margin: 0.625rem;
 }
