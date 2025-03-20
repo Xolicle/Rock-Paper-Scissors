@@ -13,9 +13,16 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 10px;
+  border: 1px solid red;
 }
 .subTitle p {
   text-align: center;
+}
+.resultPerRound {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  border: 1px solid red;
 }
 .container {
   border: 1px solid red;
@@ -44,4 +51,10 @@ body {
 .moves {
   text-align: center;
   margin: 0.625rem;
+}
+.restart {
+  border-radius: 0.625rem;
+  padding: 1rem;
+  display: none;
+  cursor: pointer;
 }

@@ -15,30 +15,45 @@
       <div class="subTitle">
         <div>
           <h2>Player</h2>
-          <p class="score">0</p>
+          <p class="playerScore">0</p>
         </div>
         <div>
           <h2>Computer</h2>
-          <p class="score">0</p>
+          <p class="computerScore">0</p>
         </div>
       </div>
+      <!-- <div class="resultPerRound">
+        <p>
+          player chose
+          <span id="playerChoice"></span>
+        </p>
+        <p>
+          computer chose
+          <span id="computerChoice"></span>
+        </p>
+      </div> -->
+      <div>
+        <h3 class="weapon">Choose your weapon:</h3>
+      </div>
       <div class="content">
-        <button id="rock">
+        <button id="rock" class="buttons">
           <span class="fa-regular fa-hand-back-fist icon"></span>Rock
         </button>
 
-        <button id="paper">
+        <button id="paper" class="buttons">
           <span class="fa-regular fa-hand icon"></span>Paper
         </button>
 
-        <button id="scissors">
+        <button id="scissors" class="buttons">
           <span class="fa-regular fa-hand-scissors icon"></span>Scissors
         </button>
         <div class="moves"></div>
-        <div class="result">bbui</div>
+
+        <div class="result">Result</div>
 
         <div class="winner">hbhb</div>
       </div>
+      <button class="restart">Restart</button>
     </div>
     <script src="index.js"></script>
   </body>
