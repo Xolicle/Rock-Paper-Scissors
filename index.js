@@ -44,7 +44,7 @@ function playGame() {
         playRound(computerChoice, guess);
       }
       // console.log(`moves is ${moves}`);
-      if (moves == 5) {
+      if (moves >= 5) {
         gameOver(btnList, round);
       }
     });
@@ -60,6 +60,7 @@ function playRound(computerSelection, humanSelection) {
   console.log("human choice is: " + humanSelection);
   const playerScore = document.querySelector(".playerScore");
   const comScore = document.querySelector(".computerScore");
+  const res = document.querySelector(".resultPerRound");
 
   if (computerSelection === humanSelection) {
     // computerScore = computerScore + 1;
@@ -67,36 +68,43 @@ function playRound(computerSelection, humanSelection) {
     //
     // console.log(computerSelection);
     // console.log(humanSelection);
+    res.innerHTML = "<p>It's a draw!</p>";
     console.log("It's a draw!");
   }
   if (computerSelection === "rock" && humanSelection === "scissors") {
     computerScore = computerScore + 1;
     comScore.innerText = computerScore;
+    res.innerHTML = "<p>You lost! Rock beats Scissors</p>";
     console.log("You lost! Rock beats Scissors");
   }
   if (computerSelection === "scissors" && humanSelection === "paper") {
     computerScore = computerScore + 1;
     comScore.innerText = computerScore;
+    res.innerHTML = "<p>You lost! Scissors beats Paper</p>";
     console.log("You lost! Scissors beats Paper");
   }
   if (computerSelection === "paper" && humanSelection === "rock") {
     computerScore = computerScore + 1;
     comScore.innerText = computerScore;
+    res.innerHTML = "<p>You lost! Paper beats Rock</p>";
     console.log("You lost! Paper beats Rock");
   }
   if (computerSelection === "scissors" && humanSelection === "rock") {
     humanScore = humanScore + 1;
     playerScore.innerText = humanScore;
+    res.innerHTML = "<p>You won! Rock beats Scissors</p>";
     console.log("You won! Rock beats Scissors");
   }
   if (computerSelection === "paper" && humanSelection === "scissors") {
     humanScore = humanScore + 1;
     playerScore.innerText = humanScore;
+    res.innerHTML = "<p>You won! Scissors beats Paper</p>";
     console.log("You won! Scissors beats Paper");
   }
   if (computerSelection === "rock" && humanSelection === "paper") {
     humanScore = humanScore + 1;
     playerScore.innerText = humanScore;
+    res.innerHTML = "<p>You Won! Paper beats Rock</p>";
     console.log("You Won! Paper beats Rock");
   }
 }
@@ -104,15 +112,25 @@ function gameOver(list, move) {
   const result = document.querySelector(".result");
   const weapon = document.querySelector(".weapon");
   const restart = document.querySelector(".restart");
+  // const resultPerRound = document.querySelector(".resultPerRound");
+  const end = document.querySelector(".gameOver");
   list.forEach((elem) => {
     elem.style.display = "none";
   });
   move.style.display = "none";
+  // resultPerRound.style.display = "none";
   weapon.style.display = "none";
   restart.style.display = "flex";
+  end.style.display = "flex";
+  result.style.display = "flex";
+  restart.addEventListener("click", () => {
+    window.location.reload();
+  });
   if (humanScore > computerScore) {
-    result.innerText = "You Won!";
-  } else result.innerText = "You Lost!";
+    result.innerHTML = "<h3>You Won!</h3>";
+  } else if (humanScore == computerScore) {
+    result.innerHTML = "<h3>It's a Draw!</h3>";
+  } else result.innerHTML = "<h3>You Lost!</h3>";
 }
 
 // if (computerScore > humanScore) {

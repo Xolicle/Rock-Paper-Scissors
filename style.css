@@ -9,14 +9,37 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
-.subTitle {
-  display: flex;
-  justify-content: space-around;
-  margin: 10px;
-  border: 1px solid red;
-}
-.subTitle p {
+.scoreBoard {
+  /* display: flex;
+  justify-content: space-around; */
+  width: 300px;
+  margin: 30px auto;
+  padding: 15px;
   text-align: center;
+  position: relative;
+  font-size: 20px;
+  border: 3px solid red;
+  border-radius: 4px;
+}
+.scoreLabel {
+  background: #fff;
+  padding: 6px;
+  font-size: 14px;
+  color: #3c4262;
+  border-radius: 4px;
+  width: 70px;
+}
+#playerLabel {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translate(-10%, -50%);
+}
+#compLabel {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translate(10%, -50%);
 }
 .resultPerRound {
   display: flex;
@@ -44,6 +67,7 @@ body {
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
+  color: #3c4262;
 }
 .icon {
   font-size: 3rem;
@@ -57,4 +81,31 @@ body {
   padding: 1rem;
   display: none;
   cursor: pointer;
+  margin: 0.625rem auto;
+}
+.gameOver,
+.result {
+  display: none;
+  margin: 0.625rem auto;
+  justify-content: center;
+}
+.weapon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+}
+#rock {
+  border: 4px solid #db3b5b;
+  box-shadow: 0 4px 2px #9d1b34;
+  background-color: #f1f1f3;
+}
+#paper {
+  border: 4px solid #eca318;
+  box-shadow: 0 4px 2px #a27009;
+  background-color: #f1f1f3;
+}
+#scissors {
+  border: 4px solid #546ef6;
+  box-shadow: 0 4px 2px #1033de;
+  background-color: #f1f1f3;
 }

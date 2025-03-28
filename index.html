@@ -12,28 +12,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="subTitle">
-        <div>
-          <h2>Player</h2>
-          <p class="playerScore">0</p>
-        </div>
-        <div>
-          <h2>Computer</h2>
-          <p class="computerScore">0</p>
-        </div>
+      <div class="scoreBoard">
+        <div id="playerLabel" class="scoreLabel">Player</div>
+        <div id="compLabel" class="scoreLabel">Computer</div>
+        <span class="playerScore">0</span>:
+        <span class="computerScore">0</span>
       </div>
-      <!-- <div class="resultPerRound">
-        <p>
-          player chose
-          <span id="playerChoice"></span>
-        </p>
-        <p>
-          computer chose
-          <span id="computerChoice"></span>
-        </p>
-      </div> -->
-      <div>
-        <h3 class="weapon">Choose your weapon:</h3>
+      <div class="resultPerRound"></div>
+      <div class="weapon">
+        <h3>Choose your weapon:</h3>
       </div>
       <div class="content">
         <button id="rock" class="buttons">
@@ -48,10 +35,10 @@
           <span class="fa-regular fa-hand-scissors icon"></span>Scissors
         </button>
         <div class="moves"></div>
-
-        <div class="result">Result</div>
-
-        <div class="winner">hbhb</div>
+        <div class="gameOver">
+          <h3>Game Over!</h3>
+        </div>
+        <div class="result"></div>
       </div>
       <button class="restart">Restart</button>
     </div>
