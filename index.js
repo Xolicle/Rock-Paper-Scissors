@@ -112,13 +112,13 @@ function gameOver(list, move) {
   const result = document.querySelector(".result");
   const weapon = document.querySelector(".weapon");
   const restart = document.querySelector(".restart");
-  // const resultPerRound = document.querySelector(".resultPerRound");
+  const resultPerRound = document.querySelector(".resultPerRound");
   const end = document.querySelector(".gameOver");
   list.forEach((elem) => {
     elem.style.display = "none";
   });
   move.style.display = "none";
-  // resultPerRound.style.display = "none";
+  resultPerRound.style.display = "none";
   weapon.style.display = "none";
   restart.style.display = "flex";
   end.style.display = "flex";

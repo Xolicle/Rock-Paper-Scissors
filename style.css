@@ -5,9 +5,21 @@
 }
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  color: #ffffff;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
   min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  margin-top: 2.5rem;
 }
 .scoreBoard {
   /* display: flex;
@@ -18,7 +30,7 @@ body {
   text-align: center;
   position: relative;
   font-size: 20px;
-  border: 3px solid red;
+  border: 3px solid #ffffff;
   border-radius: 4px;
 }
 .scoreLabel {
@@ -44,19 +56,20 @@ body {
 .resultPerRound {
   display: flex;
   justify-content: space-around;
-  margin: 10px;
-  border: 1px solid red;
+  margin: 20px;
+  /* border: 1px solid red; */
 }
 .container {
-  border: 1px solid red;
-  width: 25rem;
+  /* border: 1px solid red; */
+  /* width: 25rem; */
   height: 25rem;
   padding: 0.625rem;
-  /* margin: auto; */
+  margin: auto;
 }
 .content {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   padding: 0.625rem;
+  margin: 0.625rem;
 }
 .content button {
   width: 7rem;
@@ -74,7 +87,7 @@ body {
 }
 .moves {
   text-align: center;
-  margin: 0.625rem;
+  margin: 1.25rem;
 }
 .restart {
   border-radius: 0.625rem;
